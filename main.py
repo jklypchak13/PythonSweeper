@@ -3,9 +3,10 @@
 # -*- coding: utf-8 -*-
 import sys
 import time
+sys.path.insert(0,'src/')
 from cell import Cell
 from game import Game
-sys.path.insert(0,'src/')
+
 from PyQt5.QtWidgets import (QWidget, QFrame, QGridLayout,QPushButton,QSizePolicy)
 from PyQt5.QtGui import (QColor, QIcon)
 from PyQt5.Qt import (QSize,QApplication)
@@ -38,7 +39,7 @@ class MineSweeper(QWidget):
         
         self.button_container=QWidget(self)
 
-
+        
         self.col = QColor(0, 0, 0)      
         self.set_up_buttons(8)
         self.set_up_menu()
